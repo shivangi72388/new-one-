@@ -1,0 +1,30 @@
+var obj = [{"id":2,"name":"ABC"},
+{"id":4,"name":"AB"},
+{"id":10,"name":"AB2"},
+{"id":5,"name":"ABC3"},
+{"id":6,"name":"ABC5"}];
+
+const sortArray = arr => {
+  let matchingIds = [];
+  const sorted = arr.sort( (a,b) => {
+    if(a.id === b.id){
+      matchingIds.push(a.id);
+      return 0;
+    }else{
+      return 1;
+    }
+  }).sort( (a,b) => {
+  
+    if(matchingIds.indexOf(a.name) > -1 && matchingIds.indexOf(b.name) > -1 && a.id === b.id) {
+      return a.id - b.id;
+    }
+    if(matchingIds.indexOf(a.name) > -1 || matchingIds.indexOf(b.name) > -1) {
+      return 0;
+    }
+    return a.id - b.id;
+  });
+  
+  console.log(sorted);
+}
+
+sortArray(obj);

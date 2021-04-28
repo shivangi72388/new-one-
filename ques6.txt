@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  width:100px;
+  height:100px;
+  padding: 100px;
+  border: 1px solid green;
+  margin:150px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Centering</h2>
+<p>:</p>
+
+<div class="center">
+  <p> centered.</p>
+</div>
+
+</body>
+</html>
